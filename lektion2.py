@@ -62,10 +62,11 @@ def uppgiftLEK3UPP3():
 def uppgiftLEK9UPP14():
     output = [0, 1]
     for i in range(0, 100):
-        output.append(int(output[i-2] + output[i-1]))
+        output.append(int(output[i] + output[i+1]))
     print(output)
+    return output
 #uppgiftLEK3UPP4
 #A)Kvadratens area är 6.25 kvadratcentimeter.
 #B)
 #vilken uppgift som ska köras / kalla funktion
-uppgiftLEK3UPP2()
+uppgiftLEK9UPP14()
