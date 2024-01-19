@@ -63,6 +63,13 @@ def uppgiftLEK3UPP3():
 #A)Kvadratens area är 6.25 kvadratcentimeter.
 #B)
 
+#uppgiftLEK3UPP9
+#Hon multiplicerar en str med 0.8 vilket inte går
+#hon måste göre det till en float eller int
+
+def uppgiftLEK3UPP10():
+    diameter = float(input())
+    print(diameter * 3.14)
 def uppgiftLEK9UPP14():
     output = [0, 1]
     for i in range(0, 100):
