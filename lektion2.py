@@ -70,6 +70,7 @@ def uppgiftLEK3UPP3():
 def uppgiftLEK3UPP10():
     diameter = float(input())
     print(diameter * 3.14)
+    
 def uppgiftLEK9UPP14():
     output = [0, 1]
     for i in range(0, 100):
