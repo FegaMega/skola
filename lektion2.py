@@ -1,4 +1,4 @@
-
+import math
 
 
 #lektion 2
@@ -67,10 +67,21 @@ def uppgiftLEK3UPP3():
 #Hon multiplicerar en str med 0.8 vilket inte går
 #hon måste göre det till en float eller int
 
-def uppgiftLEK3UPP10():
-    diameter = float(input())
-    print(diameter * 3.14)
-    
+def uppgiftLEK3UPP10A():
+    diameter = float(input("diameter: "))
+    print(diameter * math.pi)
+
+def uppgiftLEK3UPP10B():
+    radien = float(input("radien: "))
+    print(radien**2 * math.pi)
+
+def uppgiftLEK3UPP15():
+    chokladbitar = int(input("Hur många choklad bitar vill du köpa? "))
+    chokladKostnad = 12
+    askKostnad = 20
+    if chokladbitar != None:
+        print("Det skulle kosta ", chokladKostnad*chokladbitar + askKostnad, "kr")
+
 def uppgiftLEK9UPP14():
     output = [0, 1]
     for i in range(0, 100):
@@ -80,4 +91,4 @@ def uppgiftLEK9UPP14():
 
 #vilken uppgift som ska köras / kalla funktion
 
-uppgiftLEK9UPP14()
+uppgiftLEK3UPP10B()
