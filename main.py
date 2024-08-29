@@ -6,3 +6,5 @@ while i < 101:
     output.append(x)
     i += 1
 print(output)
+
+
