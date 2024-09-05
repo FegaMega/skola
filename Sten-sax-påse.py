@@ -25,7 +25,6 @@ while dator_poäng < 3 and spelare_poäng < 3:
   
 
   print("\nDatorn valde " + dator_val)
-  # Dålig kod #
   if dator_val == spelare_val: 
     print("Ni valde samma! Kör igen.")
   
