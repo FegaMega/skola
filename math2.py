@@ -1,2 +1,3 @@
 import math
-x = math.asin(math.radinas())
+x = 0
+print(9960//7.5)
