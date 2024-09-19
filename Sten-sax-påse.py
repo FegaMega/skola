@@ -1,4 +1,13 @@
-import random 
+import random , time
+standardVal = .1
+
+def scrollPrint(text, interval=standardVal, endline=True):
+    listoftext = [*text]
+    for i in listoftext:
+        print(i, end="", flush=True)
+        time.sleep(interval)
+    if endline == True:
+        print("")
 
 def CheckChoice(Valids: list, choice: str):
   #Returns 1 if choice is invalid
@@ -12,21 +21,26 @@ dator_poäng = 0
 spelare_poäng = 0
 val = ["sten", "sax", "påse"]
 
-print("Välkommen till sten sax påse")
-print("Din poäng är ", spelare_poäng)
-print("datorns poäng är ", dator_poäng)
+scrollPrint("Välkommen till sten, sax, påse")
+scrollPrint("Din poäng är " + str(spelare_poäng))
+
+scrollPrint("Datorns poäng är " + str(dator_poäng))
 
 while dator_poäng < 3 and spelare_poäng < 3:
   dator_val = random.choice(val)
-  spelare_val=input("\nSten, sax eller påse? ").lower()
+
+  scrollPrint("\nSten, sax eller påse? ", endline=False)
+  spelare_val=input().lower()
+
   while CheckChoice(val, spelare_val) == 1:
-    print("\nFelstavat svar")
-    spelare_val=input("Sten, sax eller påse? ").lower()
+    scrollPrint("\nFelstavat svar")
+    scrollPrint("Sten, sax eller påse? ", endline=False)
+    spelare_val=input().lower()
   
 
-  print("\nDatorn valde " + dator_val)
+  scrollPrint(("\nDatorn valde " + str(dator_val)))
   if dator_val == spelare_val: 
-    print("Ni valde samma! Kör igen.")
+    scrollPrint("Ni valde samma! Kör igen.")
   
   elif ( 
         (spelare_val == "sten" and dator_val == "sax") or 
@@ -34,15 +48,15 @@ while dator_poäng < 3 and spelare_poäng < 3:
         (spelare_val == "påse" and dator_val == "sten")
         ):
     spelare_poäng += 1
-    print("\nDu fick poäng!\n")
+    scrollPrint("\nDu fick poäng!")
   
   else:
     dator_poäng += 1
-    print("\nDatorn fick poäng!\n")
+    scrollPrint("\nDatorn fick poäng!")
     
-  print("Din poäng är ", spelare_poäng)
-  print("Datorns poäng är ", dator_poäng)
+  scrollPrint(("Din poäng är " + str(spelare_poäng)))
+  scrollPrint(("Datorns poäng är " + str(dator_poäng)))
 if dator_poäng > spelare_poäng:
-  print("\nDatorn vann spelet!")
+  scrollPrint("\nDatorn vann spelet!")
 else:
-  print("\nDu vann spelet! Bra jobbat")
+  scrollPrint("\nDu vann spelet! Bra jobbat")
