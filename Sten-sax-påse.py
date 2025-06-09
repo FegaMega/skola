@@ -1,7 +1,6 @@
 import random , time
-standardVal = .1
 
-def scrollPrint(text, interval=standardVal, endline=True):
+def scrollPrint(text, interval=.1, endline=True):
     listoftext = [*text]
     for i in listoftext:
         print(i, end="", flush=True)
